@@ -8,17 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Expertise extends Model
 {
     use HasFactory;
+
     protected $fillable = [
-    'biography_id',
-    'title',
-    'description',
-    'experience',
-    'type',
-];
+        'biography_id',
+        'title',
+        'description',
+        'experience',
+        'type',
+    ];
+
+    // =========================
+    // RELATION FIXED
+    // =========================
 
     public function biography()
     {
-        return $this->belongsTo(Biography::class);
+        return $this->belongsTo(Biography::class, 'biography_id');
     }
-
 }

@@ -9,7 +9,7 @@ class AboutMe extends Model
 {
     use HasFactory;
 
-    protected $table = 'about_mes'; // গুরুত্বপূর্ণ
+    protected $table = 'about_mes';
 
     protected $fillable = [
         'biography_id',
@@ -37,4 +37,13 @@ class AboutMe extends Model
         'youtube',
         'website',
     ];
+
+    // =========================
+    // RELATION (IMPORTANT FIX)
+    // =========================
+
+    public function biography()
+    {
+        return $this->belongsTo(Biography::class, 'biography_id');
+    }
 }

@@ -9,7 +9,7 @@ class Research extends Model
 {
     use HasFactory;
 
-    protected $table = 'researches'; // 🔥 THIS IS MISSING
+    protected $table = 'researches';
 
     protected $fillable = [
         'biography_id',
@@ -20,8 +20,12 @@ class Research extends Model
         'description',
     ];
 
+    // =========================
+    // RELATION FIXED
+    // =========================
+
     public function biography()
     {
-        return $this->belongsTo(Biography::class);
+        return $this->belongsTo(Biography::class, 'biography_id');
     }
 }

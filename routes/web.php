@@ -5,12 +5,16 @@ use App\Http\Controllers\BiographyController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Backend\MessageController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\CVController;
 
 /*
 |--------------------------------------------------------------------------
 | FRONTEND ROUTES (6 PAGES)
 |--------------------------------------------------------------------------
 */
+
+Route::get('/cv/pdf', [CVController::class, 'downloadPDF'])->name('cv.pdf');
+Route::get('/cv/word', [CVController::class, 'downloadWord'])->name('cv.word');
 
 Route::controller(BiographyController::class)->group(function () {
 

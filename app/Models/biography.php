@@ -20,18 +20,22 @@ class Biography extends Model
         'type',
     ];
 
+    // =========================
+    // RELATIONS (FIXED)
+    // =========================
+
     public function educations()
-{
-    return $this->hasMany(Education::class);
-}
+    {
+        return $this->hasMany(Education::class, 'biography_id');
+    }
 
-public function researches()
-{
-   return $this->hasMany(Research::class, 'biography_id');
-}
+    public function researches()
+    {
+        return $this->hasMany(Research::class, 'biography_id');
+    }
 
-public function expertises()
-{
-    return $this->hasMany(Expertise::class);
-}
+    public function expertises()
+    {
+        return $this->hasMany(Expertise::class, 'biography_id');
+    }
 }
