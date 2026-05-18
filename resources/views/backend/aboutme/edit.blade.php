@@ -326,19 +326,7 @@
 
             </div>
 
-            <div class="flex space-x-4 mt-8">
-
-                <button type="submit"
-                        class="flex-1 bg-amber-500 hover:bg-amber-600 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-amber-200">
-                    Update Profile
-                </button>
-
-                <a href="{{ url()->previous() }}"
-                   class="px-8 py-3.5 bg-slate-100 text-slate-500 font-bold rounded-xl hover:bg-slate-200 transition">
-                    Cancel
-                </a>
-
-            </div>
+           
 
         </div>
     </form>
