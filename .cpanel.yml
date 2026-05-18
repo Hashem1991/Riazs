@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/tuitionp/public_html/riyaz.jobgeniusbd.com/
+    - export DEPLOYPATH=/home/tuitionp/public_html/riaz.jobgeniusbd.com/
     - /bin/cp -r * $DEPLOYPATH
